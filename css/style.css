@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 body{
     background-color: #113547;
@@ -19,8 +20,13 @@ body{
     align-items: center;
     z-index: 100;
     background: transparent;
+    background-color: #113547;
+    opacity: 0.9;
+    transition: 1s;
 }
+
 .logo{
+    display: flex;
     cursor: default;
     font-size: 5vh;
     opacity: 0;
@@ -28,6 +34,9 @@ body{
     font-weight: 800;
     color: aliceblue;
     text-decoration: none;
+}
+.logo p{
+    font-size: 15px;
 }
 .navbar a{
     display: inline-block;
@@ -39,6 +48,7 @@ body{
     opacity: 0;
     animation: slideTop .5s ease forwards;
     animation-delay: calc(.1s*var(--i));
+    transition: 0.3s  ease-in;
 }
 .navbar a:hover, .navbar a.active
 {
@@ -92,7 +102,7 @@ body{
     
     margin-right: -20px;
     animation: zoomIn 1s ease forwards, floatimage 4s ease-in-out infinite;
-    animation-delay: 1.5s, 2s;
+    animation-delay: 1.5s, 2.5s;
     opacity: 0;
 }
 .social-media a{
@@ -133,6 +143,109 @@ body{
     animation-delay: .8s;
 }
 
+
+.about{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    padding: 70px 10% 0;
+    
+}
+.about-content{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.about .about-content{
+    height: 100vh;
+    width: 100%;
+}
+.about-designer{
+
+    width: 45%;
+    height: 100%;
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center; 
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-coder{
+
+    width: 45%;
+    height: 100%;
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center; 
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-designer h1{
+    background-color: aliceblue;
+    color: #113547;
+    padding: 10px;
+}
+.about-coder h1{
+    background-color: aliceblue;
+    color: #113547;
+    padding: 10px;
+}
+.about h1{
+    font-size: 60px;
+    font-weight: 800;
+    
+}
+
+.skills{
+    margin-top: 100px;
+    height: 95vh;
+    width: 100%;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+.skills h1{
+    font-size: 30px;
+    text-shadow: 1px 2px 3px rgba(2,216,216,0.35);
+}
+.skills-content{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+.skills-item {
+    margin: 15px;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 10px;
+    background: #113547;
+    box-shadow:  -5px -5px 10px #0f3041,
+             5px 5px 10px #133a4d;
+  }
+section{
+    scroll-margin-top: 45px;
+}
+.skills-item i{
+    font-size: 50px;
+    padding: 20px;
+    
+}
+.logo-name{
+    font-size: 16px;
+}
+.skills-inner-text{
+    text-align: center;
+    margin-top: 10px;
+}
 
 /* Keyframe */
 @keyframes slideRight {
