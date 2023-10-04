@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Sign Up</title>
+</head>
+
+<body>
+    
+        
+                <div class="container">
+                    <h1>Sign Up for Our Program</h1>
+                    <form action="https://script.google.com/macros/s/AKfycbzsWylvm5NOj3wLuf7HaGvtIKTp4K4RRtPGJb4Ja3gQ_PxXFbMkRoU1cT29ySXKh4Mo/exec" method="post">
+                        <div class="input-group">
+                            <label for="firstName">First Name:</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="lastName">Last Name:</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="city">City:</label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="country">Country:</label>
+                            <input type="text" id="country" name="country" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="englishLevel">English Understanding Level:</label>
+                            <select id="englishLevel" name="englishLevel" required>
+                                <option value="None">None</option>
+                                <option value="Basic">Basic</option>
+                                <option value="Intermediary">Intermediary</option>
+                                <option value="Advanced">Advanced</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="reason">Why do you want this program?</label>
+                            <textarea id="reason" name="reason" rows="4" required></textarea>
+                        </div>
+                        <div class="input-group">
+                            <label>
+                                <input type="checkbox" required> Read and accept our <a href="terms_conditions.html" target="_blank">terms and conditions</a>.
+                            </label>
+                        </div>
+                        <div class="input-group">
+                            <label for="paymentMethod">Payment Method:</label>
+                            <select id="paymentMethod" name="paymentMethod" required>
+                                <option class="paymentMethods" value="https://buy.stripe.com/9AQ5n43J16h7axWdQQ">&#xf1f5; Stripe</option>
+                                <option class="paymentMethods" value="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-3K095697LG477310VMUODIWY">&#xf1f4; Paypal</option>
+                            </select>
+                        </div>
+
+
+
+
+                        
+                        
+
+
+
+                        <div class="input-group center">
+                            <p>Get ready, the program starts on October 25, 2023.</p>
+                        </div>
+                        <button onclick = "redirectToOption()" type="submit">Sign Up</button>
+                        <script>
+                            function redirectToOption() {
+                                var selectElement = document.getElementById("paymentMethod");
+                                var selectedOption = selectElement.value;
+                        
+                                if (selectedOption === "") {
+                                    alert("Please select an option!");
+                                } else {
+                                    window.open(selectedOption, "_blank", "width=500,height=700");
+                                }
+                            }
+                        </script>               
+                    </form>
+            </div>
+            
+</body>
+    
+
+</html>
