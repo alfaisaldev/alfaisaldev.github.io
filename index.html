@@ -1,93 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <title>Sign Up</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>My Portfolio</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
 </head>
-
 <body>
-    
-        
-                <div class="container">
-                    <h1>Sign Up for Our Program</h1>
-                    <form action="https://script.google.com/macros/s/AKfycbzsWylvm5NOj3wLuf7HaGvtIKTp4K4RRtPGJb4Ja3gQ_PxXFbMkRoU1cT29ySXKh4Mo/exec" method="post">
-                        <div class="input-group">
-                            <label for="firstName">First Name:</label>
-                            <input type="text" id="firstName" name="firstName" required>
-                        </div>
-                        <div class="input-group">
-                            <label for="lastName">Last Name:</label>
-                            <input type="text" id="lastName" name="lastName" required>
-                        </div>
-                        <div class="input-group">
-                            <label for="city">City:</label>
-                            <input type="text" id="city" name="city" required>
-                        </div>
-                        <div class="input-group">
-                            <label for="country">Country:</label>
-                            <input type="text" id="country" name="country" required>
-                        </div>
-                        <div class="input-group">
-                            <label for="englishLevel">English Understanding Level:</label>
-                            <select id="englishLevel" name="englishLevel" required>
-                                <option value="None">None</option>
-                                <option value="Basic">Basic</option>
-                                <option value="Intermediary">Intermediary</option>
-                                <option value="Advanced">Advanced</option>
-                            </select>
-                        </div>
-                        <div class="input-group">
-                            <label for="reason">Why do you want this program?</label>
-                            <textarea id="reason" name="reason" rows="4" required></textarea>
-                        </div>
-                        <div class="input-group">
-                            <label>
-                                <input type="checkbox" required> Read and accept our <a href="terms_conditions.html" target="_blank">terms and conditions</a>.
-                            </label>
-                        </div>
-                        <div class="input-group">
-                            <label for="paymentMethod">Payment Method:</label>
-                            <select id="paymentMethod" name="paymentMethod" required>
-                                <option class="paymentMethods" value="https://buy.stripe.com/9AQ5n43J16h7axWdQQ">&#xf1f5; Stripe</option>
-                                <option class="paymentMethods" value="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-3K095697LG477310VMUODIWY">&#xf1f4; Paypal</option>
-                            </select>
-                        </div>
+    <div class="header">
+        <a href="#" class="logo">alfaisaldev<p>.github.io</p></a>
+        <div class="navbar">
+            <a href="#" class="active" style="--i:1;"><span>Home</span></a>
+            <a href="#about" style="--i:2;"><span>About</span></a>
+            <a href="#skills" style="--i:3;"><span>Skills</span></a>
+            <a href="#showcase" style="--i:4;"><span>Showcase</span></a>
+            <a href="#" style="--i:5;"><span>Contact</span></a>
+        </div>
+    </div>
+        <section class="home">
+            <div class="home-content">
+                <h3>Hello it's me</h3>
+                <h1>Ali Ahsan Al Faisal</h1>
+                <h3>And I'm a <span class="multiple-text"></span></h3>
+                <p>Innovative & professional with creative mindset. Holistic
+                    thinker, listens intently, understands project requirements and conducts detailed research.</p>
 
-
-
-
-                        
-                        
-
-
-
-                        <div class="input-group center">
-                            <p>Get ready, the program starts on October 25, 2023.</p>
-                        </div>
-                        <button onclick = "redirectToOption()" type="submit">Sign Up</button>
-                        <script>
-                            function redirectToOption() {
-                                var selectElement = document.getElementById("paymentMethod");
-                                var selectedOption = selectElement.value;
-                        
-                                if (selectedOption === "") {
-                                    alert("Please select an option!");
-                                } else {
-                                    window.open(selectedOption, "_blank", "width=500,height=700");
-                                }
-                            }
-                        </script>               
-                    </form>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/inferno.hanzo.9/" target="_blank" rel="noopener noreferrer" style="--i:6;"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://www.linkedin.com/in/al-faisal-925081209" target="_blank" rel="noopener noreferrer" style="--i:7;"><i class='bx bxl-linkedin' ></i></a>
+                    <a href="https://github.com/alfaisaldev" target="_blank" rel="noopener noreferrer" style="--i:8;"><i class='bx bxl-github' ></i></a>
+                    <a href="https://www.instagram.com/wardaddysayshi/" target="_blank" rel="noopener noreferrer" style="--i:9;"><i class='bx bxl-instagram' ></i></a>
+                </div>
+                <a href="src/cv-ali_ahsan_al_faisal_short.pdf" target="_blank" class="btn">Download CV</a>
             </div>
-            
-</body>
-    
+            <div class="home-img">
+                    <img src="img/main.png" alt="">
+            </div>
+        </section>
+        <section class="about" id="about">
+            <div class="about-content" id="about-content">
+                <div class="about-designer" style="background-image: url('img/about-designer.jpg');">
+                    <h1>Designer</h1>
+                </div>
+                <div class="about-coder" style="background-image: url(img/about-code.jpg);">
+                    <h1>&ltCoder&gt</h1>
+                </div>
+            </div>
+        </section>
+        <section class="skills" id="skills">
+            <h1 style="text-align: center;">What I do</h1>
+            <div class="skills-inner-text">
+                <p>I am from Bangladesh, currently living in Dhaka. I am doing Bachelor in Computer Science from Daffodil International University. Currently working as a freelancer</p>
+            </div>
+            <div class="skills-content" id="skills-content">
+                    <div class="skills-item">
+                        <i class='bx bxl-flutter'></i>
+                        <div class="logo-name">
+                            Flutter
+                        </div>
+                    </div>
+                    <div class="skills-item">
+                        <i class='bx bxl-html5'></i>
+                        <div class="logo-name">HTML5</div>    
+                    </div>
+                    <div class="skills-item">
+                        <i class='bx bxl-css3' ></i>
+                        <div class="logo-name">CSS3</div>
+                    </div>  
+                    <div class="skills-item">
+                        <i class='bx bxl-php'></i>
+                        <div class="logo-name">PHP</div>
+                    </div>
+                    <div class="skills-item">
+                        <i class='bx bxs-file-js' ></i>
+                        <div class="logo-name">JavaScript</div>
+                    </div>
+                    <div class="skills-item">
+                        <i class='bx bxl-vuejs' ></i>
+                        <div class="logo-name">Vue.js</div>
+                    </div>  
+                    <div class="skills-item">
+                        <i class='bx bxl-firebase' ></i>
+                        <div class="logo-name">Firebase</div>
+                    </div>
+                    <div class="skills-item">
+                        <i class='bx bxl-react' ></i>
+                        <div class="logo-name">React.js</div>
+                    </div>
+                    <div class="skills-item">
+                        <i class='bx bxl-python' ></i>
+                        <div class="logo-name">Python</div>
+                    </div>
+                    <div class="skills-item">
+                        <i class='bx bxl-adobe' ></i>
+                        <div class="logo-name">Adobe</div>
+                    </div>
+                    <div class="skills-item">
+                        <i class='bx bxl-wordpress'></i>
+                        <div class="logo-name">Wordpress</div>
+                    </div>
+                    <div class="skills-item">
+                        <i class='bx bxl-java' ></i>
+                        <div class="logo-name">Java</div>
+                    </div>
+        </section>
+        <section class="showcase">
 
+            <div class="imgbx">
+                <img src="img/main.png" alt="">
+            </div>
+            <div class="imgbx">
+                <img src="img/main.png" alt="">
+            </div>
+            <div class="imgbx">
+                <img src="img/main.png" alt="">
+            </div>
+
+        </section>
+        <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+    <script src="js/main.js"></script>
+</body>
 </html>
